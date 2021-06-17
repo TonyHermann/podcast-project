@@ -2,6 +2,7 @@
 :root {
     --dark: #000;
     --darkFooter: #181818;
+    --darkFooterLight: #181818a6;
 
 }
 
@@ -145,6 +146,7 @@ main::-webkit-scrollbar:vertical {
 .content {
     font-size: 4rem;
     padding: 2rem;
+    padding-top: 0rem;
     color: white;
 }
 
@@ -161,6 +163,57 @@ main::-webkit-scrollbar:vertical {
     max-height: 20rem;
 }
 
+/* NAV */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    border-radius: 50px;
+    margin: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.profile img {
+    max-height: 3.8rem;
+    max-width: 3.8rem;
+    margin: 1rem;
+    margin-left: -2rem;
+    border-radius: 50px;
+}
+
+.profile span {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.profile i {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.backandforward button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--darkFooterLight);
+    color: white;
+}
+
+.backandforward button i {
+    font-size: 2.5rem;
+}
+
 /* First */
 
 .first h3 {
@@ -170,6 +223,7 @@ main::-webkit-scrollbar:vertical {
 .first {
     display: flex;
     flex-direction: column;
+    margin-top: 3.5rem;
 }
 
 .container-cards-playlists {
