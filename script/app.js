@@ -61,7 +61,6 @@ coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
-coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 
 let cantidad = toString(coleccion.length);
 
