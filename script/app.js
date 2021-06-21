@@ -80,7 +80,7 @@ class CardP {
 }
 
 var coleccionP = [];
-coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Ejemplo 1", "Subtitulo ejemplo"));
 coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
 coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
 coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
