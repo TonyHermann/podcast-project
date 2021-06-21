@@ -3,6 +3,8 @@
     --dark: #000;
     --darkFooter: #181818;
     --darkFooterLight: #181818a6;
+    --font: 'Roboto', sans-serif;
+    --paddingButtons: 0.7rem;
 
 }
 
@@ -14,7 +16,7 @@
 html {
     font-size: 62.5%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font);
 }
 
 body {
@@ -185,8 +187,8 @@ nav {
 }
 
 .profile img {
-    max-height: 3.8rem;
-    max-width: 3.8rem;
+    height: 3.8rem;
+    width: 3.8rem;
     margin: 1rem;
     margin-left: -2rem;
     border-radius: 50px;
@@ -217,11 +219,13 @@ nav {
 
 /* First */
 
-.first h3 {
+.first,
+.second h3 {
     font-size: 3rem;
 }
 
-.first {
+.first,
+.second {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -239,10 +243,12 @@ nav {
     background-color: var(--dark);
     display: flex;
     flex-direction: column;
+    font-family: var(--font);
 }
 
 .logo {
-    padding: 2rem;
+    padding: 2.4rem;
+    cursor: pointer;
 }
 
 .logo img {
@@ -250,17 +256,148 @@ nav {
     max-height: 3.8rem;
 }
 
-.mainbuttons {
+.mainbuttons,
+.secondarybuttons {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    margin-bottom: 4rem;
+    margin-left: .8rem;
 }
 
-.secondarybuttons {
+.mainbuttons button,
+.secondarybuttons button {
+    font-family: var(--font);
+    padding-top: var(--paddingButtons);
+    padding-bottom: var(--paddingButtons);
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 1.35rem;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: .9rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+
+.mainbuttons button:hover,
+.secondarybuttons button:hover {
+    color: gray;
+}
+
+.mainbuttons i,
+.secondarybuttons i {
+    font-size: 2.2rem;
+    margin-right: 2rem;
+}
+
+
+.secondarybuttons {
     gap: 2rem;
 }
+
+.firstbutton {
+    background-color: rgb(65, 65, 65)
+}
+
+.otherbuttons {
+    background-color: var(--dark);
+}
+
+/* second */
+
+.second {
+    margin-top: 3rem;
+}
+
+.second h3 {
+    font-weight: bold;
+    color: white;
+    font-size: 2.8rem;
+}
+
+.container-cards-podcasts {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card-podcast {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    margin: 1.6rem;
+    max-width: 19rem;
+    border-radius: 3px;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(230, 230, 230, 0.034) 0%, rgba(230, 230, 230, 0.034) 100%);
+    transition: all 1s;
+}
+
+.card-podcast:hover {
+    background: linear-gradient(180deg, rgba(230, 230, 230, 0.14329481792717091) 0%, rgba(230, 230, 230, 0.15449929971988796) 100%);
+    transition: all 1s;
+}
+
+.card-podcast img {
+    max-width: 16rem;
+    border-radius: 9px;
+    margin: 1.6rem;
+    margin-bottom: 2.9rem;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.72);
+}
+
+.infoP {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 4rem;
+    margin-left: 2rem;
+}
+
+.infoP h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.infoP span {
+    font-size: 1.4rem;
+}
+
+.third {
+    margin-top: 5rem;
+}
+
+.hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(230, 230, 230, 0.034) 0%, rgba(230, 230, 230, 0.034) 100%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.hidden span {
+    padding: 30rem;
+}
+
+.footer {
+    font-size: 1rem;
+    margin-top: 30rem;
+}
+
+/* Profile Photo by <a href="https://unsplash.com/@weista?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vista Wei</a> on <a href="https://unsplash.com/s/photos/tokyo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+

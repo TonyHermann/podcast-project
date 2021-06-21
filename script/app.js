@@ -1,42 +1,7 @@
-// let boton = document.getElementById("boton");
-
-// let wh = () => {
-//     console.log("Width "+document.documentElement.clientWidth);
-//     console.log("Height "+document.documentElement.clientHeight);
-// }
-
-// boton.addEventListener("click", wh);
-
-// let cardplaylist = document.getElementById("card-playlist");
-// let buttonplay = document.getElementById("button-play");
-
-// let cardplaylist = document.getElementById("card-playlist");
-// let buttonplay = document.getElementById("button-play");
-
-// let display = () => {
-//     // buttonplay.style.transform = "scale(100%)"
-//     buttonplay.style.opacity = "unset";
-//     buttonplay.style.transition = "all 0.2s";
-//     console.log("hola");
-//     // buttonplay.style.display = "unset";
-// }
-
-// let displayNone = () => {
-//     // buttonplay.style.transform = "scale(0)"
-//     buttonplay.style.opacity = "0";
-//     buttonplay.style.transition = "all 0.2s";
-//     console.log("chau");
-// }
 
 
-
-// cardplaylist.addEventListener("mouseover", display);
-// cardplaylist.addEventListener("mouseleave", displayNone);
 
 let fatherDiv = document.getElementById("container-cards-playlists");
-
-
-
 
 class Card {
     constructor(i, t, s) {
@@ -57,6 +22,7 @@ class Card {
 }
 
 var coleccion = [];
+coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
 coleccion.push(new Card("./resources/images/first.png", "Ejemplo 1", "fa fa-play"));
@@ -87,20 +53,54 @@ for(var x of coleccion)
     childDiv.appendChild(info);
 }
 
-// for(let x of coleccion)
-// {
-//   console.log(x);
-//   x.mostrarImagen()
-// }
+let fatherDivPodcast = document.getElementById("container-cards-podcasts");
 
+class CardP {
+    constructor(i, t, s) {
+        this.imagen = i;
+        this.titulo = t;
+        this.stitulo = s;
+    }
+    yImagen() {
+        let source = this.imagen;
+        console.log("esto sacó del xImagen "+ source);
+        return source
+    }
+    yTitulo() {
+        let value = this.titulo;
+        console.log("esto sacó el xtitulo "+ value)
+        return value
+    }
 
-// <div class="card-playlist" id="card-playlist">
-//                             <img src="./resources/images/first.png" alt="portada">
-//                             <div class="info">
-//                                 <span>Ejemplo 1</span>
-//                                 <div class="button-play" id="button-play">
-//                                     <span class="fa fa-play" aria-hidden="true"></span>
-//                                 </div>
-//                             </div>
-//                         </div>
+    ySub() {
+        let subvalue = this.stitulo;
+        console.log("esto sacó el xtitulo "+ subvalue)
+        return subvalue
+    }
+}
 
+var coleccionP = [];
+coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+coleccionP.push(new CardP("./resources/images/first.png", "Ejemplo 1", "Subtitulo ejemplo"));
+
+for(var y of coleccionP)
+{
+    let childDivY = document.createElement('div');
+    childDivY.setAttribute("class", "card-podcast");
+    let imgY = document.createElement('img');
+    imgY.src = y.yImagen();
+    fatherDivPodcast.appendChild(childDivY);
+    childDivY.appendChild(imgY)
+    let infoY = document.createElement('div');
+    infoY.setAttribute("class", "infoP");
+    let h3 = document.createElement('h3');
+    h3.textContent = y.yTitulo();
+    infoY.appendChild(h3);
+    let spanY = document.createElement('span');
+    spanY.textContent = y.ySub();
+    infoY.appendChild(spanY);
+    childDivY.appendChild(infoY);
+}
