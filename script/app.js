@@ -88,12 +88,12 @@ class CardP {
 }
 
 var coleccionP = [];
-coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Overthink", "Antonio Alejo Serral Hermann, Tomas Ariel Quero, Bruno Marchett y Juan Cruz Mercadal", "./resources/audio/01 - My Dearest.mp3"));
-coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Artistin", "Marcella Kirchner"));
+coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Overthink", "Antonio Alejo Serral Hermann, Tomas Ariel Quero, Bruno Marchett y Juan Cruz Mercadal", "./resources/audio/se-he_mar_que_mer.mp3"));
 coleccionP.push(new CardP("https://cdn.discordapp.com/attachments/854073695780470784/856897914306560010/220px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer2C_1565_-_Google_Art_Project.png", "Pieter Brueghel el Viejo", "Autoretrato"));
 coleccionP.push(new CardP("https://lamecanicaceleste.files.wordpress.com/2020/09/stadler.jpg?w=670", "Ernst Sadler", "Grandes exitos"));
 coleccionP.push(new CardP("https://www.visitoslo.com/contentassets/3932b41a7b684b40a28d3195191265fe/edvard-munch-nasjonalbiblioteket.jpg?preset=Teaser", "This is Edvard Munch", "A spotify playlist"));
 coleccionP.push(new CardP("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg/220px-Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg", "This is Der Blaue Reiter"));
+coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Artistin", "Marcella Kirchner"));
 
 for (var y of coleccionP) {
     console.log(y);
