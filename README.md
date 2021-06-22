@@ -6,7 +6,7 @@ _I made this webpage JUST for an highschool project._ 🚀
 ### 5 I'm using google fonts too.
 
 ## Made with (love and) 🛠️
-_Nota: En la barra que muestra qel % de lenguajes, figura lo de font aweseme (no usé scss ni sass)_
+_Nota: En la barra que muestra qel % de lenguajes, figura lo de font aweseme (no usé scss ni less)_
 
 * [HTML]
 * [CSS]
