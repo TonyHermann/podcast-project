@@ -66,19 +66,17 @@
 
     </main>
     <div class="footer">
-        <!-- <audio class="player_audio" controls id="audio">
-            <source src="resources/audio/01 - My Dearest.mp3" type="audio/mpeg">
-        </audio> -->
+
         <div class="songinfo">
-            <img src="./resources/images/first.png" alt="">
+            <img src="./resources/images/first.png" alt="" id="songinfo_img">
             <div class="songinfo_info">
-                <h3>Ejemplo 1</h3>
-                <span>Ejemplo subtitulo</span>
+                <h3 id="songinfo_h3"></h3>
+                <span id="songinfo_span"></span>
             </div>
 
-            <div class="songinfo_buttons"> 
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-desktop" aria-hidden="true"></i>
+            <div class="songinfo_buttons">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <i class="fa fa-desktop" aria-hidden="true"></i>
             </div>
         </div>
 
@@ -86,13 +84,17 @@
             <div class="song_track_controls">
                 <i class="fa fa-random" aria-hidden="true"></i>
                 <i class="fa fa-step-backward" aria-hidden="true"></i>
-                <i class="fa fa-play-circle" aria-hidden="true"></i>
+                <i class="fa fa-play-circle" aria-hidden="true" id="song_track_play_button"></i>
+                <i class="fa fa-pause-circle" aria-hidden="true" id="song_track_stop_button"></i>
                 <i class="fa fa-step-forward" aria-hidden="true"></i>
                 <i class="fa fa-cog" aria-hidden="true"></i>
             </div>
             <div class="songtrack_song">
-                <input type="range" name="songtrack" id="songtrack">
+                <input type="range" name="songtrack" id="songtrack_range">
             </div>
+            <audio class="player_audio" controls id="audio">
+                <source src="" type="audio/mpeg" autoplay="false" id="song_source">
+            </audio>
         </div>
 
         <div class="extracontrols">
@@ -100,7 +102,7 @@
             <i class="fa fa-list" aria-hidden="true"></i>
             <i class="fa fa-television" aria-hidden="true"></i>
             <i class="fa fa-volume-down" aria-hidden="true"></i>
-            <input type= "range" name="volume" class="volume" id="volume">
+            <input type="range" name="volume" class="volume" id="volume">
             <i class="fa fa-expand" aria-hidden="true"></i>
         </div>
 
