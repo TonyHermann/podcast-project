@@ -1,3 +1,5 @@
+alert("Aviso, esta página está diseñada originalmente para monitores con resolución 16:9 y 1920x1080px; por lo que es probable que si tu monitor no cuenta con estas características, no puedas ver el diseño de la página web como se debe. Si es tu caso, te recomiendo apretar la tecla CTRL y la tecla menos - ");
+
 let fatherDiv = document.getElementById("container-cards-playlists");
 let songinfoh3 = document.getElementById("songinfo_h3");
 let songinfospan = document.getElementById("songinfo_span");
@@ -94,33 +96,66 @@ coleccionP.push(new CardP("https://www.visitoslo.com/contentassets/3932b41a7b684
 coleccionP.push(new CardP("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg/220px-Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg", "This is Der Blaue Reiter"));
 
 for (var y of coleccionP) {
-    let childDivY = document.createElement('div');
-    childDivY.setAttribute("class", "card-podcast");
-    let imgY = document.createElement('img');
-    imgY.src = y.yImagen();
-    fatherDivPodcast.appendChild(childDivY);
-    childDivY.appendChild(imgY)
-    let infoY = document.createElement('div');
-    infoY.setAttribute("class", "infoP");
-    let h3 = document.createElement('h3');
-    h3.textContent = y.yTitulo();
-    infoY.appendChild(h3);
-    let spanY = document.createElement('span');
-    spanY.textContent = y.ySub();
-    infoY.appendChild(spanY);
-    childDivY.appendChild(infoY);
-    let srccc = y.ySong();
-    let titulete = y.yTitulo();
-    let subtitulete = y.yTitulo();
-    let image = y.yImagen();
-    childDivY.addEventListener('click', function () {
-        song.src = srccc;
-        songinfoh3.textContent = titulete;
-        songinfospan.textContent = subtitulete;
-        songinfoimg.src = image;
-        song.play();
-    })
+    console.log(y);
+    if (y.titulo === "Overthink") {
+        let childDivY = document.createElement('div');
+        childDivY.setAttribute("class", "card-podcast");
+        childDivY.setAttribute("id", "ichi");
+        let imgY = document.createElement('img');
+        imgY.src = y.yImagen();
+        fatherDivPodcast.appendChild(childDivY);
+        childDivY.appendChild(imgY)
+        let infoY = document.createElement('div');
+        infoY.setAttribute("class", "infoP");
+        let h3 = document.createElement('h3');
+        h3.textContent = y.yTitulo();
+        infoY.appendChild(h3);
+        let spanY = document.createElement('span');
+        spanY.textContent = y.ySub();
+        infoY.appendChild(spanY);
+        childDivY.appendChild(infoY);
+        let srccc = y.ySong();
+        let titulete = y.yTitulo();
+        let subtitulete = y.yTitulo();
+        let image = y.yImagen();
+        childDivY.addEventListener('click', function () {
+            song.src = srccc;
+            songinfoh3.textContent = titulete;
+            songinfospan.textContent = subtitulete;
+            songinfoimg.src = image;
+            song.play();
+        })
+        
+    } else {
+        let childDivY = document.createElement('div');
+        childDivY.setAttribute("class", "card-podcast");
+        let imgY = document.createElement('img');
+        imgY.src = y.yImagen();
+        fatherDivPodcast.appendChild(childDivY);
+        childDivY.appendChild(imgY)
+        let infoY = document.createElement('div');
+        infoY.setAttribute("class", "infoP");
+        let h3 = document.createElement('h3');
+        h3.textContent = y.yTitulo();
+        infoY.appendChild(h3);
+        let spanY = document.createElement('span');
+        spanY.textContent = y.ySub();
+        infoY.appendChild(spanY);
+        childDivY.appendChild(infoY);
+        let srccc = y.ySong();
+        let titulete = y.yTitulo();
+        let subtitulete = y.yTitulo();
+        let image = y.yImagen();
+        childDivY.addEventListener('click', function () {
+            song.src = srccc;
+            songinfoh3.textContent = titulete;
+            songinfospan.textContent = subtitulete;
+            songinfoimg.src = image;
+            song.play();
+        })
+    }
 }
+
 
 let play_button = document.getElementById("song_track_play_button");
 let songtrack = document.getElementById("songtrack_range");
@@ -128,10 +163,17 @@ let volumetrack = document.getElementById("volume");
 let song = document.getElementById("audio");
 let pause_button = document.getElementById("song_track_stop_button");
 
+let pause_button_two = document.getElementById("main_list_card_info_bottom_button_pause");
+let play_button_two = document.getElementById("main_list_card_info_bottom_button_play")
+
+
 let playS = () => {
 
     play_button.style.display = "none";
     pause_button.style.display = "unset";
+
+    play_button_two.style.display = "none";
+    pause_button_two.style.display = "unset";
 
     song.play();
 
@@ -142,6 +184,9 @@ let playSs = () => {
     play_button.style.display = "unset";
     pause_button.style.display = "none";
 
+    play_button_two.style.display = "unset";
+    pause_button_two.style.display = "none";
+
     song.pause();
 
 }
@@ -149,7 +194,10 @@ let playSs = () => {
 songtrack.max = song.duration;
 
 play_button.addEventListener("click", playS);
-pause_button.addEventListener("click", playSs)
+pause_button.addEventListener("click", playSs);
+
+play_button_two.addEventListener("click", playS);
+pause_button_two.addEventListener("click", playSs);
 
 song.addEventListener('timeupdate', function () {
     songtrack.max = song.duration;
@@ -173,3 +221,46 @@ volumetrack.addEventListener('change', function () {
 
 
 // Bruegel, Stadler Ernst, Edvard Munch, Die Brücke o Der Blaue Reiter.
+
+let ichi = document.getElementById("ichi");
+
+let firstcontainer = document.getElementById("firstcontainer");
+
+let secondcontainer = document.getElementById("secondcontainer");
+
+secondcontainer.style.display = "none";
+
+let verifier = false;
+
+if (ichi) {
+    ichi.addEventListener("click", function () {
+        firstcontainer.style.display = "none";
+        secondcontainer.style.display = "unset";
+        play_button.style.display = "none";
+        pause_button.style.display = "unset";
+    
+        play_button_two.style.display = "none";
+        pause_button_two.style.display = "unset";
+        verifier = true;
+    });
+}
+
+let backarrow_two = document.getElementById("back_and_forwad_two_back");
+let forwadarrow_two = document.getElementById("back_and_forwad_two_forward");
+
+let backarrow = document.getElementById("back_and_forwad_back");
+let forwadarrow = document.getElementById("back_and_forwad_forward");
+
+backarrow_two.addEventListener("click", function() {
+    firstcontainer.style.display = "unset";
+    secondcontainer.style.display = "none";
+    console.log("hola")
+});
+
+forwardarrow.addEventListener("click", function() {
+    firstcontainer.style.display = "unset";
+    secondcontainer.style.display = "none";
+    console.log("hola")
+});
+
+
